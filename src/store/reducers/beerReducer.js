@@ -1,27 +1,7 @@
-const initState = {
-    "data": [
-        {
-            "id": "c4f2KE",
-            "name": "'Murican Pilsner",
-            "nameDisplay": "'Murican Pilsner",
-            "abv": "5.5",
-            "glasswareId": 4,
-            "styleId": 98,
-            "isOrganic": "N",
-            "isRetired": "N",
-        },
-        {
-            "id": "c4f2KE",
-            "name": "'Murican Pilsner",
-            "nameDisplay": "'Murican Pilsner",
-            "abv": "5.5",
-            "glasswareId": 4,
-            "styleId": 98,
-            "isOrganic": "N",
-            "isRetired": "N",
-        }
-    ]
-}
+import { beers } from '../../config/JSONBeers'
+
+
+const initState = beers
 
 
 const beerReducer = (state = initState, action) => {
