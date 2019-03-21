@@ -20,7 +20,7 @@ const styles = theme => ({
     card: {
         color: theme.palette.text.secondary,
         width: '200',
-        height: 'auto'
+        height: '100px'
 
 
 
@@ -45,7 +45,7 @@ const BeerCard = ({ beer, classes }) => {
                             component="img"
                             alt="beer"
                             className={classes.media}
-                            height="140"
+
                             image={beer.image_url}
                             title="beer"
                         />}
