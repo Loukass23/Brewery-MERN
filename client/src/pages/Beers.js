@@ -3,6 +3,9 @@ import { getBeers } from '../store/actions/beerActions'
 import { connect } from 'react-redux'
 import BeerList from '../components/Beer/BeerList'
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+
+
 
 class Beers extends Component {
     componentDidMount() {
@@ -13,12 +16,17 @@ class Beers extends Component {
         const { beers } = this.props
         console.log(beers)
         return (
-            <div>
-                <Typography component="h2" variant="h2" gutterBottom>
-                    Beers
-      </Typography>
-                <BeerList beers={beers} />
-            </div>
+            <Grid
+                px='3px'
+                container
+                spacing={24}>
+                <Grid item xs={12}>
+
+                    <Typography component="h2" variant="h2" gutterBottom>
+                        Beers</Typography>
+                    <BeerList beers={beers} />
+                </Grid>
+            </Grid>
         )
     }
 }

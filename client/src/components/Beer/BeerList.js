@@ -8,16 +8,13 @@ const BeerList = ({ beers }) => {
         <div className="cities-list section">
             <Grid
                 container
-                direction='column'
-                wrap='wrap'
-                spacing={12}
+                spacing={24}
                 justify="center"
                 style={{ minHeight: '100vh' }}>
 
                 {beers && beers.map(beer => {
                     return (
-                        <Grid item xs={12} sm={6} lg={4} key={beer.id}
-                            justify="center">
+                        <Grid item xs={12} sm={6} lg={4} key={beer.id}>
 
                             <BeerCard beer={beer} />
 
