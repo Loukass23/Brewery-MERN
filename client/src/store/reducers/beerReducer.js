@@ -1,16 +1,16 @@
 import { beers } from '../../config/JSONBeers'
 
 
-const initState = beers
+const initState = {}
 
 
 const beerReducer = (state = initState, action) => {
-    console.log(state)
+    console.log(action)
     switch (action.type) {
         case 'GET_BEERS':
             return {
                 ...state,
-                beers: action
+                beers: action.user
             }
         case 'GET_BEERS_ERROR':
             console.log('Beers fetch error', action.err)

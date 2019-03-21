@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import Landing from './pages/Landing';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
+import Landing from './pages/Landing';
+import Beers from './pages/Beers';
 
 class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <Landing />
-      </div>
+
+
+      <BrowserRouter>
+        <div className='App'>
+          <Landing />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/beers' component={Beers} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
