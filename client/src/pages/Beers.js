@@ -3,9 +3,6 @@ import { getBeers } from '../store/actions/beerActions'
 import { connect } from 'react-redux'
 import BeerList from '../components/Beer/BeerList'
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-
-
 
 class Beers extends Component {
     componentDidMount() {
@@ -26,7 +23,6 @@ class Beers extends Component {
     }
 }
 const mapStateToProp = (state) => {
-    console.log(state)
     return {
         beers: state.beer.beers,
     }

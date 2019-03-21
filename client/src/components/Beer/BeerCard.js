@@ -16,16 +16,12 @@ const styles = theme => ({
     root: {
         flexGrow: 1,
     },
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
+
     card: {
-        width: 400,
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
         color: theme.palette.text.secondary,
+        width: '200',
+        height: 'auto'
+
 
 
     },
@@ -41,7 +37,8 @@ const styles = theme => ({
 const BeerCard = ({ beer, classes }) => {
     return (
         <>
-            <Card xs={6} className={classes.card}>
+            <Card className={classes.card}
+                raised>
                 <CardActionArea>
                     {beer.image_url &&
                         <CardMedia
@@ -52,7 +49,7 @@ const BeerCard = ({ beer, classes }) => {
                             image={beer.image_url}
                             title="beer"
                         />}
-                    <CardContent height='400px'>
+                    <CardContent >
                         <Typography gutterBottom variant="h5" component="h2">
                             {beer.name}
                         </Typography>

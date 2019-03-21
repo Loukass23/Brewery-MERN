@@ -12,7 +12,6 @@ class App extends Component {
 
       <BrowserRouter>
         <div className='App'>
-          <Landing />
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/beers' component={Beers} />
