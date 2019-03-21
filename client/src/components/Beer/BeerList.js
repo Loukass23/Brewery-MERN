@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 const BeerList = ({ beers }) => {
     return (
-        <div className="cities-list section">
+        <div className="beers-list section">
             <Grid
                 container
                 spacing={24}
