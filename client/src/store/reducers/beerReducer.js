@@ -5,7 +5,6 @@ const initState = {}
 
 
 const beerReducer = (state = initState, action) => {
-    console.log(action)
     switch (action.type) {
         case 'GET_BEERS':
             return {
