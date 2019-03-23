@@ -47,17 +47,17 @@ const styles = theme => ({
 
 
 
-const BeerCard = ({ beer, classes }) => {
+const BreweryCard = ({ brewery, classes }) => {
     return (
         <>
             <Card className={classes.card}>
                 <div className={classes.details}>
                     <CardContent className={classes.content}>
                         <Typography component="h5" variant="h5">
-                            {beer.name}
+                            {brewery.name}
                         </Typography>
                         <Typography variant="subtitle1" color="textSecondary">
-                            {beer.description}
+                            {brewery.description}
                         </Typography>
                     </CardContent>
                     <CardActions className={classes.actions} disableActionSpacing>
@@ -73,52 +73,19 @@ const BeerCard = ({ beer, classes }) => {
 
                 <CardMedia
                     className={classes.cover}
-                    image={beer.image_url}
-                    title={beer.name}
+                    image={brewery.image}
+                    title={brewery.name}
                 />
 
             </Card>
 
-            {/* 
-            <Card className={classes.card}
-                raised>
-                <CardActionArea>
-                    {beer.image_url &&
-                        <CardMedia
-                            component="img"
-                            alt="beer"
-                            className={classes.media}
 
-                            image={beer.image_url}
-                            title="beer"
-                        />}
-                    <CardContent >
-                        <Typography gutterBottom variant="h5" component="h2">
-                            {beer.name}
-                        </Typography>
-                        <Typography component="p">
-                            {beer.description}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                        Share
-        </Button>
-                    <Link to={'/beer/' + beer.id} key={beer.id}>
-
-                        <Button size="small" color="primary">
-
-                            Learn More
-        </Button></Link>
-                </CardActions>
-            </Card> */}
 
         </>
     )
 }
-BeerCard.propTypes = {
+BreweryCard.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(BeerCard);
+export default withStyles(styles)(BreweryCard);
