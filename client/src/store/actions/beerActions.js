@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { config } from '../../config/breweryDBConfig';
 
+
 // export const getBeers = () => {
 //     return {
 //         type: 'GET_BEERS'
