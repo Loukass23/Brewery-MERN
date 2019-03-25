@@ -30,6 +30,7 @@ class Beers extends Component {
         )
     }
 }
+
 const mapStateToProp = (state) => {
     return {
         beers: state.beer.beers,
