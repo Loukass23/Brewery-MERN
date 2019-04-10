@@ -16,17 +16,21 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import NavDrawer from './NavDrawer';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
+import { createMuiTheme } from '@material-ui/core/styles';
+import red from '@material-ui/core/colors/red';
 
+const theme = createMuiTheme({
+    palette: {
+        primary: red,
+    },
+});
 const styles = theme => ({
     root: {
         width: '100%',
@@ -200,8 +204,8 @@ class Navbar extends React.Component {
 
         return (
             <div className={classes.root}>
-                <AppBar position="static">
-                    <Toolbar>
+                <AppBar position="static"  >
+                    <Toolbar >
                         <IconButton
                             color="inherit"
                             aria-label="Open drawer"

@@ -14,16 +14,15 @@ class App extends Component {
 
 
       <BrowserRouter>
-        <Grid container spacing={16}>
-          <div className='App'>
-            <Navbar />
-            <Switch>
-              <Route exact path='/' component={Landing} />
-              <Route exact path='/beers' component={Beers} />
-              <Route exact path='/breweries' component={Breweries} />
-            </Switch>
-          </div>
-        </Grid>
+        <div className='App'>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/beers' component={Beers} />
+            <Route exact path='/breweries' component={Breweries} />
+          </Switch>
+        </div>
+
       </BrowserRouter>
     );
   }

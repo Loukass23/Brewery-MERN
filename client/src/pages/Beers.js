@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 
-
 class Beers extends Component {
     componentDidMount() {
         this.props.getBeers()
@@ -16,10 +15,9 @@ class Beers extends Component {
         const { beers } = this.props
         console.log(beers)
         return (
-            <Grid
-                px='3px'
-                container
-                spacing={24}>
+            <Grid container
+                className='container'
+                direction={'column'} justify={'center'} align={'center'}>
                 <Grid item xs={12}>
 
                     <Typography component="h2" variant="h2" gutterBottom>
